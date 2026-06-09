@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets / env
+.env
+.env.*
+*.key
+
+# Data — source PDFs not committed (may be copyrighted / large)
+data/*
+!data/dpdp_act_2023.pdf
+chroma_db/
+
+# Chroma persistence
+*.sqlite3
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
