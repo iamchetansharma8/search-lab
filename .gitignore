@@ -26,3 +26,6 @@ chroma_db/
 .DS_Store
 .idea/
 .vscode/
+
+# DB
+chroma
