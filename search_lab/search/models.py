@@ -12,3 +12,6 @@ class SearchResult(BaseModel):
     char_start: int
     strategy: str
     mode: SearchMode  # which search produced it
+    reranker: str | None = (
+        None  # name of reranker that reordered this ("local"/"cohere"); None = not reranked
+    )
