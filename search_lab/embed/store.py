@@ -75,3 +75,22 @@ def orchestrate_chroma_store_for_strategy(
     embeddings = generate_embeddings(chunks, embed_model_spec)
     add_data(collection, chunks, embeddings)
     return collection.count()
+
+def chunks_from_collection(collection) -> list[Chunk]:
+    """Read all chunks back out of a Chroma collection as Chunk objects.
+
+    Single source of truth: the chunks already indexed in Chroma (with their
+    provenance) are reused for the OpenSearch/BM25 index, so both backends
+    hold identical units.
+    """
+    got = collection.get(include=["documents", "metadatas"])
+    return [
+        Chunk(
+            id=cid,
+            text=doc,
+            page=meta["page_number"],  # Chroma key -> Chunk.page
+            char_start=meta["char_start"],
+            strategy=meta["strategy"],
+        )
+        for cid, doc, meta in zip(got["ids"], got["documents"], got["metadatas"])
+    ]
