@@ -15,7 +15,7 @@ class Retriever:
     os_index: str
 
     def search(
-        self, query: str, mode: SearchMode, top_k: int = 10
+        self, query: str, mode: SearchMode, top_k: int = 10, fetch_depth: int = 20
     ) -> list[SearchResult]:
         match mode:
             case SearchMode.DENSE:
@@ -23,7 +23,7 @@ class Retriever:
             case SearchMode.SPARSE:
                 return self._sparse(query, top_k)
             case SearchMode.HYBRID:
-                return self._hybrid(query, top_k)
+                return self._hybrid(query, top_k, fetch_depth)
 
     def _dense(self, query: str, top_k: int) -> list[SearchResult]:
         query_embedding = self.embed_spec.model.encode(
