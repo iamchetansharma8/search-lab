@@ -1,0 +1,62 @@
+[
+  {
+    "qid": "q01",
+    "query": "Can we make a data principal to sign a contract to forgo his legal rights as per dpdp act",
+    "relevant": [{ "page": 5, "char_start": 1606, "char_end": 2228 }],
+    "note": "Section 6(2) infringement of rights"
+  },
+  {
+    "qid": "q02",
+    "query": "If a company hires another company to handle its data processing, what kind of arrangement is legally required between them?",
+    "relevant": [{ "page": 7, "char_start": 2338, "char_end": 2393 }],
+    "note": "Section 8, sub-section (2)"
+  },
+  {
+    "qid": "q03",
+    "query": "Can businesses run targeted advertising aimed at children?",
+    "relevant": [{ "page": 8, "char_start": 2751, "char_end": 2880 }],
+    "note": "Section 9, sub-section (3)"
+  },
+  {
+    "qid": "q04",
+    "query": "What is the definition of a Consent Manager under the DPDP Act?",
+    "relevant": [{ "page": 2, "char_start": 755, "char_end": 991 }],
+    "note": "Section 2, clause (g), page 2"
+  },
+  {
+    "qid": "q05",
+    "query": "What happens to a person's data rights if they pass away or become unable to act for themselves?",
+    "relevant": [{ "page": 10, "char_start": 1944, "char_end": 2241}],
+    "note": "Section 14, page 10 (the 'Right to nominate')"
+  },
+  {
+    "qid": "q06",
+    "query": "Does this law apply to data I post publicly about myself on social media?",
+    "relevant": [{ "page": 4, "char_start": 153, "char_end": 290 }],
+    "note": "Section 3, clause (c), sub-clause (ii)(A), page 4"
+  },
+  {
+    "qid": "q07",
+    "query": "When there's a data breach, who has to be informed about it?",
+    "relevant": [{ "page": 7, "char_start": 3118, "char_end": 3302 }],
+    "note": "Section 8, sub-section (6), page 7"
+  },
+  {
+    "qid": "q08",
+    "query": "What is a Data Protection Impact Assessment?",
+    "relevant": [{ "page": 9, "char_start": 951, "char_end": 1279 }],
+    "note": "Section 10, sub-section (2)(c)(i), page 9"
+  },
+  {
+    "qid": "q09",
+    "query": "How long does someone have to file an appeal against a Board decision?",
+    "relevant": [{ "page": 15, "char_start": 2488, "char_end": 2738 }],
+    "note": "Section 29, sub-section (2), page 15"
+  },
+  {
+    "qid": "q10",
+    "query": "Can I ask a company to delete my personal data, and do they always have to comply?",
+    "relevant": [{ "page": 10, "char_start": 823, "char_end": 1169}],
+    "note": "Section 12, sub-section (3), page 10"
+  }
+]

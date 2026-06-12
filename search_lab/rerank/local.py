@@ -48,6 +48,7 @@ class LocalReranker(Reranker):
                     rank=i + 1,
                     page=r.page,
                     char_start=r.char_start,
+                    char_end=r.char_end,
                     strategy=r.strategy,
                     mode=r.mode,
                     reranker=self.name,

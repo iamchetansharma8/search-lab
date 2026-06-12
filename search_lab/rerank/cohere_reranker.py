@@ -52,6 +52,7 @@ class CohereReranker(Reranker):
                     rank=i + 1,  # fresh 1..top_k (response is pre-sorted)
                     page=src.page,
                     char_start=src.char_start,
+                    char_end=src.char_end,
                     strategy=src.strategy,
                     mode=src.mode,  # carried forward
                     reranker=self.name,  # "cohere"
