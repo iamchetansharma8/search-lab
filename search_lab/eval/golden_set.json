@@ -26,7 +26,7 @@
   {
     "qid": "q05",
     "query": "What happens to a person's data rights if they pass away or become unable to act for themselves?",
-    "relevant": [{ "page": 10, "char_start": 1944, "char_end": 2241}],
+    "relevant": [{ "page": 10, "char_start": 1944, "char_end": 2241 }],
     "note": "Section 14, page 10 (the 'Right to nominate')"
   },
   {
@@ -56,7 +56,67 @@
   {
     "qid": "q10",
     "query": "Can I ask a company to delete my personal data, and do they always have to comply?",
-    "relevant": [{ "page": 10, "char_start": 823, "char_end": 1169}],
+    "relevant": [{ "page": 10, "char_start": 823, "char_end": 1169 }],
     "note": "Section 12, sub-section (3), page 10"
+  },
+  {
+    "qid": "q11",
+    "query": "What is the role of the Data Protection Board of India?",
+    "relevant": [{ "page": 12, "char_start": 1647, "char_end": 2240 }],
+    "note": "Section 18, page 12"
+  },
+  {
+    "qid": "q12",
+    "query": "If I gave consent to a company before this law existed, is that consent still valid?",
+    "relevant": [{ "page": 4, "char_start": 1964, "char_end": 2531 }],
+    "note": "Section 5, sub-section (2), page 4 (continuing onto page 5)"
+  },
+  {
+    "qid": "q13",
+    "query": "Who qualifies as a child under the DPDP Act?",
+    "relevant": [{ "page": 2, "char_start": 670, "char_end": 750 }],
+    "note": "Section 2, clause (f), page 2"
+  },
+  {
+    "qid": "q14",
+    "query": "Are there situations where the government can completely exempt an agency from this law?",
+    "relevant": [{ "page": 11, "char_start": 2890, "char_end": 3307 }],
+    "note": "Section 17, sub-section (2)(a), page 11"
+  },
+  {
+    "qid": "q15",
+    "query": "What powers does the Board have that are similar to a civil court?",
+    "relevant": [{ "page": 15, "char_start": 724, "char_end": 1246 }],
+    "note": "Section 28, sub-section (7), page 15"
+  },
+  {
+    "qid": "q16",
+    "query": "What does 'personal data breach' mean under the Act?",
+    "relevant": [{ "page": 3, "char_start": 674, "char_end": 946 }],
+    "note": "Section 2, clause (u), page 3"
+  },
+  {
+    "qid": "q17",
+    "query": "Who is a Data Fiduciary as defined in the Act?",
+    "relevant": [{ "page": 2, "char_start": 1192, "char_end": 1341 }],
+    "note": "Section 2, clause (i), page 2"
+  },
+  {
+    "qid": "q18",
+    "query": "Where are the penalty amounts credited after the Board imposes them?",
+    "relevant": [{ "page": 17, "char_start": 951, "char_end": 1082 }],
+    "note": "Section 34, page 17"
+  },
+  {
+    "qid": "q19",
+    "query": "data processor definition dpdp",
+    "relevant": [{ "page": 2, "char_start": 1604, "char_end": 1697 }],
+    "note": "keyword fragment style, Section 2, clause (k), page 2"
+  },
+  {
+    "qid": "q20",
+    "query": "personal data breach notification board fiduciary",
+    "relevant": [{ "page": 7, "char_start": 3118, "char_end": 3303 }],
+    "note": "keyword fragment style, Section 8(6), page 7"
   }
 ]

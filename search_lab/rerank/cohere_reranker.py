@@ -3,6 +3,7 @@ Same Reranker interface as the local cross-encoder — swappable at eval time.
 """
 
 import os
+import time
 
 import cohere
 
@@ -15,13 +16,16 @@ DEFAULT_MODEL = "rerank-v3.5"
 class CohereReranker(Reranker):
     name = "cohere"
 
-    def __init__(self, model_name: str = DEFAULT_MODEL) -> None:
+    def __init__(
+        self, model_name: str = DEFAULT_MODEL, throttle_s: float = 0.0
+    ) -> None:
         # Entry point is responsible for load_dotenv(); we only read env here.
         api_key = os.environ.get("COHERE_API_KEY")
         if not api_key:
             raise ValueError("COHERE_API_KEY not set in environment")
         self.client = cohere.ClientV2(api_key=api_key)
         self.model_name = model_name
+        self.throttle_s = throttle_s  # >0 paces calls under trial-key rate limit
 
     def rerank(
         self, query: str, results: list[SearchResult], top_k: int
@@ -31,6 +35,8 @@ class CohereReranker(Reranker):
 
         documents = [r.text for r in results]
 
+        if self.throttle_s:
+            time.sleep(self.throttle_s)
         # Cohere returns results already sorted desc by relevance and trimmed
         # to top_n. Each item carries .index (into our `documents`/`results`)
         # and .relevance_score (0-1, higher = better).

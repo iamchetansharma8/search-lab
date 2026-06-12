@@ -73,7 +73,7 @@ def main() -> None:
 
     local = LocalReranker()
     try:
-        cohere = CohereReranker()
+        cohere = CohereReranker(throttle_s=6.5)  # trial key: 10 calls/min
     except ValueError as e:
         print(f"[warn] Cohere disabled: {e}")
         cohere = None
@@ -92,6 +92,8 @@ def main() -> None:
             "recursive/hybrid/local", retrievers["recursive"], SearchMode.HYBRID, local
         ),
     ]
+    # Cohere disabled during authoring to avoid trial-key rate limit (10/min).
+    # Re-enable for the final 20-question run.
     if cohere is not None:
         configs.append(
             EvalConfig(
