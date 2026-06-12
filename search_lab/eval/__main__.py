@@ -24,6 +24,7 @@ from dotenv import load_dotenv
 from search_lab.embed.models import EmbedModelSpec
 from search_lab.embed.store import collection_name_for
 from search_lab.eval.golden import load_golden_set
+from search_lab.eval.plot import plot_mrr
 from search_lab.eval.runner import EvalConfig, format_table, run_eval
 from search_lab.rerank.cohere_reranker import CohereReranker
 from search_lab.rerank.local import LocalReranker
@@ -104,7 +105,8 @@ def main() -> None:
     results = run_eval(configs, queries, K_VALUES, MIN_COVERAGE, TOP_K)
     print()
     print(format_table(results, K_VALUES, MIN_COVERAGE))
-
+    out = plot_mrr(results, GOLDEN_PATH.parent / "eval_results.png")
+    print(f"\nchart written to {out}")
 
 if __name__ == "__main__":
     main()
