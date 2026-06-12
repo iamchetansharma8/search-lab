@@ -79,6 +79,7 @@ def fixed_size_chunker(
                     page=page_number,
                     strategy="fixed",
                     char_start=char_start,
+                    char_end=char_end,
                 )
             )
             i += 1
@@ -158,7 +159,7 @@ def recursive_chunker(
                     token_len=tok_len,
                     content_budget=content_budget,
                 )
-
+            char_end = char_start + len(piece) if char_start >= 0 else -1
             chunks.append(
                 Chunk(
                     id=f"recursive-{i:04d}",
@@ -166,6 +167,7 @@ def recursive_chunker(
                     page=page_number,
                     strategy="recursive",
                     char_start=char_start,
+                    char_end=char_end,
                 )
             )
             i += 1

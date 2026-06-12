@@ -18,6 +18,7 @@ MAPPING = {
             "text": {"type": "text"},  # analyzed -> BM25
             "page_number": {"type": "integer"},
             "char_start": {"type": "integer"},
+            "char_end": {"type": "integer"},
             "strategy": {"type": "keyword"},
         }
     }
@@ -57,6 +58,7 @@ def index_chunks(client: OpenSearch, name: str, chunks: list[Chunk]) -> int:
                 "text": chunk.text,
                 "page_number": chunk.page,
                 "char_start": chunk.char_start,
+                "char_end": chunk.char_end,
                 "strategy": chunk.strategy,
             },
         }

@@ -45,6 +45,7 @@ class Retriever:
                     rank=i + 1,
                     page=meta["page_number"],
                     char_start=meta["char_start"],
+                    char_end=meta["char_end"],
                     strategy=meta["strategy"],
                     mode=SearchMode.DENSE,
                 )
@@ -76,6 +77,7 @@ class Retriever:
                     rank=i + 1,
                     page=src["page_number"],  # OS key -> SearchResult.page
                     char_start=src["char_start"],
+                    char_end=src["char_end"],
                     strategy=src["strategy"],
                     mode=SearchMode.SPARSE,
                 )
@@ -107,14 +109,17 @@ class Retriever:
         results: list[SearchResult] = []
         for i, cid in enumerate(ranked_ids):
             src = by_id[cid]
-            results.append(SearchResult(
-                id=src.id,
-                text=src.text,
-                score=rrf_scores[cid],       # RRF score is what produced this ranking
-                rank=i + 1,
-                page=src.page,
-                char_start=src.char_start,
-                strategy=src.strategy,
-                mode=SearchMode.HYBRID,
-            ))
+            results.append(
+                SearchResult(
+                    id=src.id,
+                    text=src.text,
+                    score=rrf_scores[cid],  # RRF score is what produced this ranking
+                    rank=i + 1,
+                    page=src.page,
+                    char_start=src.char_start,
+                    char_end=src.char_end,
+                    strategy=src.strategy,
+                    mode=SearchMode.HYBRID,
+                )
+            )
         return results

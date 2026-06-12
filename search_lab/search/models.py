@@ -10,6 +10,7 @@ class SearchResult(BaseModel):
     rank: int  # 1-based position in this result list
     page: int
     char_start: int
+    char_end: int
     strategy: str
     mode: SearchMode  # which search produced it
     reranker: str | None = (

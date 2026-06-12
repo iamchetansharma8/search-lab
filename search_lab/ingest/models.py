@@ -18,7 +18,9 @@ class Chunk(BaseModel):
     
     """char_start tells where in the page the given chunk began. Finer-grained provenance than page alone"""
     char_start: int = Field(..., description="Start offset within the page's text")
-
+    char_end: int = Field(
+        ..., description="End offset (exclusive) within the page's text"
+    )
     def __len__(self) -> int:
         """Length in characters — convenience for inspection/logging."""
         return len(self.text)

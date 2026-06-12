@@ -56,7 +56,8 @@ def add_data(
             {
                 "page_number": chunk.page,
                 "char_start": chunk.char_start,
-                "strategy": chunk.strategy
+                "char_end": chunk.char_end,
+                "strategy": chunk.strategy,
             }
             for chunk in chunks
         ],
@@ -90,6 +91,7 @@ def chunks_from_collection(collection) -> list[Chunk]:
             text=doc,
             page=meta["page_number"],  # Chroma key -> Chunk.page
             char_start=meta["char_start"],
+            char_end=meta["char_end"],
             strategy=meta["strategy"],
         )
         for cid, doc, meta in zip(got["ids"], got["documents"], got["metadatas"])
