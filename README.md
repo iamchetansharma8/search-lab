@@ -4,7 +4,7 @@ A retrieval-evaluation harness over the **Digital Personal Data Protection (DPDP
 
 The system supports two chunking strategies, three search modes, and two rerankers, evaluated in any combination. Results are reported as Mean Reciprocal Rank (MRR) and Hit@{1,3,5} per configuration.
 
-> 📝 A narrative writeup of these findings is on dev.to: [Your RAG stack depends on your data. I measured how much.](PASTE_DEVTO_URL)
+> 📝 A narrative writeup of these findings is on dev.to: [Your RAG stack depends on your data. I measured how much.](https://dev.to/chetan_sharma_2b6e1b5ff5c/your-rag-stack-depends-on-your-data-i-measured-how-much-42g5)
 
 ## Pipeline
 
